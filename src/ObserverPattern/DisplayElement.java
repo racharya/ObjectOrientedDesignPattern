@@ -1,3 +1,5 @@
+package ObserverPattern;
+
 /**
  * The Display Element interface
  */
