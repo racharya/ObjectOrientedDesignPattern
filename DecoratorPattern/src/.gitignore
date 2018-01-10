@@ -1,0 +1,9 @@
+*.idea/
+*.iml
+*.class
+.out
+.DS_Store
+../../StrategyPattern/.idea
+../.idea
+../ObserverPattern/.idea
+../.DS_Store
