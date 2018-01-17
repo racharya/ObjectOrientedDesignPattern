@@ -18,6 +18,6 @@ public class PancakeHouseIterator implements Iterator {
     }
 
     public boolean hasNext() {
-        return (items.get(position) == null || position >= items.size()) ? false : true ;
+        return (position >= items.size() || items.get(position) == null) ? false : true ;
     }
 }
