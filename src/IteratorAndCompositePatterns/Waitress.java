@@ -22,9 +22,10 @@ public class Waitress {
     private void printMenu(Iterator it) {
         while(it.hasNext()){
             MenuItem menuItem = (MenuItem) it.next();
-            System.out.println(menuItem.getName() + ", ");
-            System.out.println(menuItem.getDescription()+ ", ");
-            System.out.println(menuItem.getPrice());
+            System.out.print(menuItem.getName() + ", ");
+            System.out.print(menuItem.getPrice()+ " -- ");
+            System.out.println(menuItem.getDescription());
+
         }
     }
 }
