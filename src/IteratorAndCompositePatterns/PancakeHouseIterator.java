@@ -1,6 +1,7 @@
 package IteratorAndCompositePatterns;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PancakeHouseIterator implements Iterator {
 

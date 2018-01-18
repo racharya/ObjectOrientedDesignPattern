@@ -1,18 +1,19 @@
 package IteratorAndCompositePatterns;
+import java.util.Iterator;
 
 public class Waitress {
 
-    PancakeHouseMenu phm;
-    DinerMenu dm;
+    Menu pancakeHouseMenu;
+    Menu dinerMenu;
 
-    public Waitress(PancakeHouseMenu phm, DinerMenu dm){
-        this.phm = phm;
-        this.dm = dm;
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu){
+        this.pancakeHouseMenu = pancakeHouseMenu;
+        this.dinerMenu = dinerMenu;
     }
 
     public void printMenu(){
-        Iterator pi = phm.createIterator();
-        Iterator di = dm.createIterator();
+        Iterator pi = pancakeHouseMenu.createIterator();
+        Iterator di = dinerMenu.createIterator();
         System.out.println("MENU\n----\nBREAKFAST");
         printMenu(pi);
         System.out.println("\nLUNCH");

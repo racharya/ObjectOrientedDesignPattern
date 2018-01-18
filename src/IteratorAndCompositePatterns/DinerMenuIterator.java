@@ -1,4 +1,5 @@
 package IteratorAndCompositePatterns;
+import java.util.Iterator;
 
 public class DinerMenuIterator implements Iterator {
 
@@ -15,7 +16,20 @@ public class DinerMenuIterator implements Iterator {
         return menuItem;
     }
 
-    public boolean hasNext(){
+    public boolean hasNext()
+    {
         return (position >= items.length || items[position] == null) ? false : true;
+    }
+
+    public void remove() {
+        if(position <= 0){
+            throw new IllegalStateException("No can do");
+        }
+        if (items[position-1] != null ){
+            for(int i = position-1; i < (items.length - 1); i++){
+                items[i] = items[i+1];
+            }
+            items[items.length-1] = null;
+        }
     }
 }
